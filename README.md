@@ -34,6 +34,7 @@ A few more insights came out of the analysis.
 │   └── analysis.sql          BigQuery staging layer (cleaned views) plus 6 analysis queries
 ├── powerbi/
 │   └── NordFurnish_dashboard.pbix   6-page interactive report with drill-through and a what-if simulator
+|   └── Final project n!.pdf   Power BI dashboard export (PDF)
 ├── python/
 │   └── profit_regression.ipynb      EDA plus linear regression (profit from sales, discount, quantity)
 ├── data/

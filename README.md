@@ -23,7 +23,7 @@ A few more insights came out of the analysis.
 * Depth of discount matters more than frequency. Chairs are discounted as often as Tables but shallowly, so they stay profitable.
 * Revenue rankings hide losses. Top cities like NYC and LA are healthy, but small cities such as Concord, Fairfield and Aurora lose money invisibly, and Philadelphia is high-revenue yet loss-making.
 * Revenue is seasonal. A February low and a Q4 peak repeat across all four years on top of steady growth.
-* The customer base is low-frequency at about 2.5 orders per customer, with 74% still active. Retention matters more than upselling here.
+* The customer base is low-frequency at about 2.5 orders per customer, with 74% still active under a 365-day cutoff. Retention matters more than upselling here.
 
 ---
 
@@ -60,7 +60,7 @@ I built a staging layer so the raw tables stay untouched and the cleaned version
 
 The dataset has a single category (Furniture), so all category analysis is done at the sub-category level (Chairs, Tables, Bookcases, Furnishings).
 
-Six analysis queries follow. Top products by revenue, average discount by region, loyal customers using an RFM approach with a churn threshold derived from real inter-order gaps, profit by sub-category using margin rather than absolute profit, discounted-sales share, and the unified table.
+Six analysis queries follow. Top products by revenue, average discount by region, loyal customers with an RFM-style view and an active/lapsed flag (a customer counts as lapsed after 365 days without an order; the cutoff is a business assumption, because with about 2.5 orders per customer the data is too sparse to estimate it reliably from order gaps), profit by sub-category using margin rather than absolute profit, discounted-sales share, and the unified table.
 
 ## Power BI — interactive report
 
